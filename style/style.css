@@ -1,0 +1,746 @@
+@font-face {
+    font-family: 'Zanvil-Regular';
+    src: url('../fonts/Zanvil-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: black;
+}
+
+::selection {
+    color: white;
+  background-color: darksalmon;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+img#bottom{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 5px;
+    padding: 15px;
+    width: auto;
+    float: left;
+}
+
+img.position-right{
+    max-width: 16%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 350px;
+    margin-top: 80px;
+}
+
+img.position-left{
+    opacity: 80%;
+    max-width: 8%;
+    position: fixed;
+    margin-left: 160px;
+    top: 100;
+    left: 0;
+}
+
+img.position-top{
+    opacity: 50%;
+    max-width: 5%;
+    position: fixed;
+    top: 20;
+    left: 100;
+}
+
+.section-1 {
+    /* background-image: url('../import/Archives_Pierrefitte_AJ38_1735_Dossier_995_11.jpg');*/
+    background-color: white;
+    background-size: cover; /* Pour que l'image couvre toute la section */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    min-height: 100vh; /* S'assurer que la section prend toute la hauteur de la fenêtre */
+    display: flex; /* Optionnel, pour aligner le contenu */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+.section-2 {
+    color: white;
+}
+
+.section-3 {
+    color: white;
+}
+
+.section-4 {
+    color: black;
+    min-height: auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.section-5 {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 97%;
+    width: auto;
+    margin: auto;
+    z-index: 1001;
+}
+
+#section-11{
+    margin-top: -300px;
+}
+
+div.timeline{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+ul.timeline-dates{
+    padding-bottom: 10px;
+    border-right: 1.5px solid white;
+    width: fit-content;
+    text-align: right;
+    float: right;
+    height: fit-content;
+    margin-top: 15px;
+    margin-left: -22px;
+}
+
+li.dates{
+    background-color: transparent;
+    padding-right: 15px;
+    padding-top: 3px;
+    height: fit-content;
+}
+
+li.saut{
+    color: transparent;
+    background-color: transparent;
+    padding-right: 10px;
+    padding-top: 3px;
+    height: fit-content;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 85%;
+}
+
+.content-wrapper-traduction{
+    display: inline-block;
+    max-width: 85%;
+    line-height: 1.2em;
+}
+
+.content{
+    margin-top: 30px;
+    display: flex;
+}
+
+.original-content{
+    text-align: left;
+    padding: 10px;
+    width: 50%;
+}
+
+.traduction-content{
+    text-align: left;
+    padding: 10px;
+    width: 50%;
+}
+
+.content-wrapper-no-center{
+
+    align-items: none;
+    display: flex;
+    max-width: 85%;
+}
+
+.image-block {
+    flex: 1;
+}
+
+.image-block img {
+    max-width: 80%;
+    height: auto;
+}
+
+.image-block-letters{
+    max-width: 80%;
+    height: auto;
+}
+
+.image-block-letters img{
+
+    float: right;
+    width: 50%;
+    margin-top: 40px;
+    margin-right: 150px;
+    height: auto;
+    display: flex;
+}
+
+img.small {
+    margin-top: 30px;
+    max-width: 60%;
+    float: right;
+    height: auto;
+}
+
+img.little {
+    width: 30%;
+    position: absolute;
+    top: -400px;
+    right: 200px;
+    float: right;
+}
+
+div.images-right{
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+img.little-2 {
+    position: absolute;
+    width: 40%;
+    top: -450px;
+    right: 150px;
+}
+
+img.little-3 {
+    position: absolute;
+    width: 60%;
+    top: -400px;
+    right: 150px;
+}
+
+.text-block {
+    width: 100%;
+    text-align: left;
+    line-height: 1.6em;
+    flex: 1;
+}
+
+.text-block-letters{
+
+    width: 200%;
+    height: fit-content;
+    margin-left: 5vw;
+    margin-top: 10vw;
+    text-align: left;
+    line-height: 1.2em;
+}
+
+.text-block p.explications{
+    width: 76%;
+    line-height: 1.2em;
+    font-style: normal;
+}
+
+p.explications-left{
+    
+    width: 100%;
+    position: relative;
+    padding-top: 10px;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+p.dates-left{
+    text-align: left;
+}
+
+p.parallax {
+    position: absolute;
+    top: 50%;
+    right: 85%;
+    transform: translate(-50%, -50%);
+}
+
+p.traduction-russian, .traduction-tamil, .traduction-peuhl, .traduction-creole, .traduction-gouro, .traduction-chti, .traduction-portuguais, .traduction-allemand{
+    height: auto;
+    color: white;
+    width: 100%;
+    text-align: left;
+}
+
+figcaption{
+    text-align: left;
+    margin-left: 10%;
+    padding-bottom: 30px;
+}
+
+figcaption.no-center{
+    position: absolute;
+    text-align: left;
+    padding-left: 30%;
+    padding-bottom: 30px;
+}
+
+h1 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-top: -50px;
+    margin-left: 35px;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+audio {
+    opacity: 0.5; /* Transparence initiale */
+    float: left;
+    width: 50%; /* Largeur */
+    margin: 20px auto;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition douce pour l'opacité et l'animation */
+}
+
+audio:hover {
+    opacity: 1; /* Transparence complète au survol */
+    cursor: pointer; /* Curseur de clic */
+}
+
+sup {
+    vertical-align: super;
+    padding-left: 1px;
+    font-size: 0.8em;
+}
+
+span.italic{
+    font-style: italic;
+}
+
+span.picto {
+    font-family: 'Zanvil-Regular';
+    font-style: initial;
+    font-size: 0.8em;
+}
+
+span.regular {
+    font-style: initial;
+}
+
+span.item-bold{
+    font-weight: bold;
+}
+
+a{
+  color: white;  
+  text-decoration: none;
+}
+
+a:hover{
+  color: darksalmon;  
+  text-decoration: none;
+}
+
+a.anchor{
+  color: white;  
+  text-decoration: none;
+}
+
+a:hover{
+  color: darksalmon;  
+  text-decoration: none;
+}
+
+.anchor {
+    font-weight: normal;
+    transition: font-weight 0.3s ease;
+}
+
+.anchor.active {
+    color: darksalmon;
+}
+
+p#big{
+    width: 55%;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+p.credits{
+    color: white;
+    padding: 10px;
+    width: 35%;
+    margin-right: 40%;
+    float: right;
+    font-size: 0.9em;
+    margin-top: 5px;
+    line-height: 1.2em;
+}
+
+p.description{
+    z-index: 1000;
+    color: white;
+    width: 100%;
+    padding-left: 14%;
+    padding-right: 62%;
+    margin-bottom: 30vh;
+    float: left;
+    text-align: left;
+    cursor: default;
+}
+
+.top_left {
+    float: left;
+    margin-top: 15px;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    width: auto;
+    /* min-width: 100px; */
+    display: inline-block;
+}
+
+ul.menu li{
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 0.9em;
+}
+
+li.item-bold{
+    font-weight: bold;
+    color: white;
+}
+
+nav.white{
+    z-index: 1000;
+    margin-top: -5px;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    width: fit-content;
+}
+
+nav{
+    margin-top: -5px;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    width: fit-content;
+}
+
+.hidden {
+    display: none;
+}
+
+footer{
+    margin-top: -5px;
+    position: fixed;
+    height: fit-content;
+    bottom: 0;
+    width: fit-content;
+}
+
+.image-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.image-item[style="display: block;"] {
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* La hauteur du conteneur s'ajuste à la fenêtre */
+    overflow: visible; /* Permet de tout afficher */
+}
+
+.image-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    grid-auto-rows: auto; /* La hauteur des lignes s'ajuste en fonction du contenu */
+    padding: 10px;
+    width: 75%;
+    float: right;
+    height: 100vh; /* La hauteur de la grille s'ajuste automatiquement en fonction du contenu */
+    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* La hauteur de chaque image-container s'ajuste automatiquement */
+    overflow: hidden; /* Masque tout débordement d'éléments internes */
+    justify-content: center; /* Centrer le contenu dans le conteneur */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto; /* L'image s'ajuste en fonction de sa largeur */
+    display: block; /* Éviter les marges indésirables */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    color: white;
+    font-size: 0.8em;
+    opacity: 0; /* Masqué par défaut */
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1; /* Affiché au hover */
+}
+
+/* Styles pour la carte flip */
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Assure l'effet 3D pour le flip */
+    transition: transform 0.8s; /* Durée de l'animation du flip */
+    cursor: pointer;
+}
+
+/* Lorsque la carte est retournée */
+.flip-card.is-flipped {
+    transform: rotateY(180deg); /* Applique la rotation sur l'axe Y */
+}
+
+/* Les faces de la carte : recto et verso */
+.flip-card .front,
+.flip-card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Les deux faces prennent la même largeur */
+    height: auto;  /* Les deux faces prennent la même hauteur */
+    backface-visibility: hidden; /* Masque l'arrière lors du flip */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style du recto */
+.flip-card .front {
+    z-index: 2; /* Le recto est affiché par défaut */
+}
+
+/* Style du verso, caché jusqu'à ce que la carte soit retournée */
+.flip-card .back {
+    transform: rotateY(180deg); /* Cache l'arrière au début */
+}
+
+/* Assure que les images sont bien ajustées */
+.flip-card .front img,
+.flip-card .back img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Style pour les images interactives */
+.image-container.flip-card {
+    min-height: 450px; /* Pour les images recto verso */
+    position: relative; /* Assure que l'overlay sera correctement positionné */
+}
+
+.image-container.flip-card::after {
+    font-weight: normal;
+    content: '↻'; /* Icône de rotation */
+    font-size: 1.5em;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color: white;
+    padding: 5px;
+    opacity: 0; /* Masqué par défaut */
+    transition: opacity 0.3s ease;
+}
+
+.image-container.flip-card:hover::after {
+    opacity: 1; /* Affiché au survol */
+}
+
+/* Ajout d'un message explicite pour les images interactives */
+.image-container.flip-card .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Masqué par défaut */
+    transition: opacity 0.3s ease;
+}
+
+.image-container.flip-card:hover .overlay-text {
+    opacity: 1; /* Affiché au survol */
+}
+
+
+figcaption.white{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+audio.full-width{
+    width: 100%;
+    margin: auto;
+}
+
+div.right{
+    padding: 10px;
+    height: 100vh;
+    float: right;
+    width: 75%;
+}
+
+div.audio-section{
+    display: flex;
+}
+
+.column-1{
+    font-size: 0.9em;
+    margin-top: 5px;
+    line-height: 1.2em;
+    width: 33.3%;
+}
+
+.column-2{
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.2em;
+    color: white;
+    width: 33.3%;
+}
+
+.column-3{
+    font-size: 0.9em;
+    margin-top: 5px;
+    line-height: 1.2em;
+    width: 33.3%;
+}
+
+.img-column{
+    width: 100%;
+    height: auto;
+}
+
+div.contexte{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    float: right;
+    height: 100vh;
+    width: 25%;
+}
+
+p.contexte-convoi{
+    margin-top: 25%;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+}
+
+p.contexte-convoi:hover{
+    color: white;
+}
+
+
+
+
+.map-point {
+    position: absolute;
+    width: 8px; /* Taille du point */
+    height: 8px; /* Taille du point */
+    background-color: transparent; /* Rendre l'arrière-plan transparent */
+    border: none; /* Supprimer la bordure */
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Animation pour l'effet au survol */
+}
+
+.map-point::before {
+    font-family: 'Zanvil-Regular';
+    content: 'f'; /* Signe typographique */
+    font-size: 1em; /* Ajustez la taille du symbole */
+    color: white; /* Couleur du signe */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer le signe */
+    transition: color 0.2s ease, transform 0.2s ease; /* Transition sur la couleur et la taille */
+}
+
+/* Effet au survol */
+.map-point:hover {
+    transform: translate(-50%, -50%) scale(1.4); /* Agrandissement du point */
+    background-color: darksalmon; /* Couleur modifiée au survol */
+}
+
+.map-point:hover::before {
+    color: darksalmon; /* Changement de couleur du signe */
+    transform: translate(-50%, -50%) scale(1.2); /* Agrandissement du signe */
+}
+
+/* Styles des pop-ups */
+.popup {
+    position: absolute;
+    background-color: black;
+    border: 1px solid white;
+    color: white; /* Couleur du texte */
+    padding: 10px; /* Espacement interne */
+    width: fit-content;
+    font-size: 0.9em;
+    pointer-events: none; /* Empêche l'interaction avec la pop-up */
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+    transform: translate(10%, -50%);
+    display: none; /* La pop-up est invisible par défaut */
+}
+
+/* Animation d'apparition pour la pop-up */
+.popup.show {
+    display: block; /* Affiche la pop-up lorsqu'elle est active */
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
