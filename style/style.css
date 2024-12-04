@@ -653,9 +653,10 @@ div.audio-section{
 }
 
 div.contexte{
-    position: fixed;
-    top: 0;
-    right: 0;
+    position: relative;
+    bottom: 0;
+    margin-top: -80px;
+    margin-left: 5px;
     z-index: 1000;
     float: right;
     height: 100vh;
@@ -691,7 +692,7 @@ p.contexte-convoi:hover{
     font-family: 'Zanvil-Regular';
     content: 'f'; /* Signe typographique */
     font-size: 1em; /* Ajustez la taille du symbole */
-    color: white; /* Couleur du signe */
+    color: darksalmon; /* Couleur du signe */
     position: absolute;
     top: 50%;
     left: 50%;
