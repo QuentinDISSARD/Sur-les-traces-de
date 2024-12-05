@@ -167,10 +167,13 @@ li.saut{
 }
 
 .content-wrapper-no-center{
-
     align-items: none;
     display: flex;
     max-width: 85%;
+}
+
+img.help:hover{
+    cursor: help;
 }
 
 .image-block {
@@ -380,7 +383,7 @@ p#big{
 p.credits{
     color: white;
     padding: 10px;
-    width: 35%;
+    width: 36%;
     margin-right: 40%;
     float: right;
     font-size: 0.9em;
@@ -420,6 +423,15 @@ ul.menu li{
 li.item-bold{
     font-weight: bold;
     color: white;
+}
+
+li.item-convoi-bold{
+    font-weight: bold;
+    color: white;
+}
+
+li.item-convoi:hover{
+    color: lightgray;
 }
 
 nav.white{
@@ -602,6 +614,7 @@ footer{
 
 
 figcaption.white{
+    text-align: center;
     margin: 0px;
     padding: 0px;
     color: white;
