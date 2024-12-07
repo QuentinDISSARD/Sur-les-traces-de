@@ -307,18 +307,26 @@ h1 {
     mix-blend-mode: difference;
 }
 
-audio {
-    opacity: 0.5; /* Transparence initiale */
-    float: left;
-    width: 50%; /* Largeur */
-    margin: 20px auto;
-    display: block;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition douce pour l'opacité et l'animation */
+/* Conteneur principal */
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%; /* Prend toute la largeur disponible */
 }
 
-audio:hover {
-    opacity: 1; /* Transparence complète au survol */
-    cursor: pointer; /* Curseur de clic */
+/* Player audio */
+.audio-player {
+    margin-top: 15px;
+    width: 100%; /* Prend toute la largeur du conteneur */
+    border-radius: 100px; /* Coins arrondis pour un style moderne */
+}
+
+/* Caption */
+.audio-caption {
+    padding: 0;
+    margin: 0;
+    color: white;
+    width: 100%;
 }
 
 sup {
@@ -343,6 +351,25 @@ span.regular {
 
 span.item-bold{
     font-weight: bold;
+}
+
+a.white{
+    color: white;  
+    text-decoration: none;
+}
+
+a.white:hover{
+    color: gray;
+}
+
+a.blue{
+    color: black;  
+    text-decoration: none;
+}
+
+a.blue:hover{
+    color: lightgray; 
+    text-decoration: none;
 }
 
 a{
@@ -432,6 +459,17 @@ li.item-convoi-bold{
 
 li.item-convoi:hover{
     color: lightgray;
+}
+
+nav.white-background{
+    background-color: white;
+    color: #0A294E;
+    z-index: 1000;
+    margin-top: -5px;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    width: 100%;
 }
 
 nav.white{
@@ -612,19 +650,6 @@ footer{
     opacity: 1; /* Affiché au survol */
 }
 
-
-figcaption.white{
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    color: white;
-}
-
-audio.full-width{
-    width: 100%;
-    margin: auto;
-}
-
 div.right{
     padding: 10px;
     height: 100vh;
@@ -633,6 +658,7 @@ div.right{
 }
 
 div.audio-section{
+    margin-bottom: 3%;
     display: flex;
 }
 
@@ -660,6 +686,24 @@ div.audio-section{
     width: 33.3%;
 }
 
+.column-2{
+    margin-bottom: 15px;
+}
+
+.hidden-content {
+    display: none; /* Hide the content initially */
+}
+.read-more {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.read-less {
+    display: none; /* Hide the '-' button initially */
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .img-column{
     width: 100%;
     height: auto;
@@ -672,23 +716,30 @@ div.contexte{
     margin-left: 5px;
     z-index: 1000;
     float: right;
-    height: 100vh;
-    width: 25%;
+    height: fit-content;
+    width: 55%;
 }
 
 p.contexte-convoi{
-    margin-top: 25%;
+    margin-top: 11%;
     padding: 10px;
-    color: white;
+    color: black;
     font-size: 0.9em;
 }
 
-p.contexte-convoi:hover{
+div.contribution{
+    mix-blend-mode: difference;
+    font-size: 0.9em;
+    padding: 15px;
     color: white;
+    position: fixed;
+    bottom: 0;
+    width: fit-content;
 }
 
-
-
+img.logo{
+    width: 10%;
+}
 
 .map-point {
     position: absolute;

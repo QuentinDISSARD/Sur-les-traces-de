@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sur les traces de Peril Zanvil</title>
+    <title>Convoi 77 - Sur les traces de</title>
     <link rel="stylesheetx" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" href="import/favicon.png">
+    <link rel="icon" href="import/favicon2.png">
     <style>
         #map-container {
             position: absolute;
@@ -22,14 +22,20 @@
             transform-origin: top left; 
             will-change: transform; 
         }
+
+        ::selection {
+            color: white;
+            background-color: black;
+        }
+
     </style>
 </head>
 <body>
 
-    <nav class="white">
+    <nav class="white-background">
         <div class="top_left">
             <ul class="menu">
-                <li class="item-convoi-bold"><a href="https://convoi77.org/" target="_Blank">Convoi 77</li><li class="item-convoi"><a href="https://convoi77.org/histoire-et-composition-du-convoi/" target="_Blank">Les déportés</a></li><li class="item-convoi"><a href="https://convoi77.org/adherer-a-lassociation/" target="_Blank">Adhérer</a></li><li class="item-convoi"><a href="https://convoi77.org/nous-contacter-2/" target="_Blank">Contact</a></li>
+                <li class="item-convoi-bold"><a class="blue" href="https://convoi77.org/" target="_Blank">Convoi 77</li><li class="item-convoi"><a class="blue" href="https://convoi77.org/histoire-et-composition-du-convoi/" target="_Blank">Les déportés</a></li><li class="item-convoi"><a class="blue" href="https://convoi77.org/adherer-a-lassociation/" target="_Blank">Adhérer</a></li><li class="item-convoi"><a class="blue" href="https://convoi77.org/nous-contacter-2/" target="_Blank">Contact</a></li>
             </ul>
         </div>  
     </nav>
@@ -39,6 +45,10 @@
             <p class="contexte-convoi">Convoi 77, c’est le dernier convoi ayant quitté la France en 1944, emportant vers Auschwitz 1306 hommes, femmes et enfants. Chaque année, sous la direction de Claire Podetti, enseignante d’histoire et de géographie, des collégiens tentent de reconstituer la vie de l’une de ces 1306 personnes dont ne peut subsister qu’un nom, parfois incertain, ou un vague souvenir. Il en résulte alors une biographie traduite dans différentes langues dont certaines parlées par les élèves, témoignant cette volonté de faire perdurer et partager le souvenir des déportés de la Shoah. 
             </p>
         </div>
+
+    <div class="contribution">
+        <p><a class="white" href="https://convoi77.org/comment-envoyer-une-biographie/" target="_Blank">Envoyer une biographie</a></p>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
     <script src="js/script.js"></script>
@@ -94,7 +104,7 @@
     addPoint(47.6, 41.2, { 
         title: "Peril Zanvil<br>", 
         description: "10.05.1898 – 5.08.1944", 
-        url: "histoire.html" 
+        url: "chronologie.html" 
     });
 
     // Écouteurs pour le zoom avec la molette
