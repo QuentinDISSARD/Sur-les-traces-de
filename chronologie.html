@@ -12,6 +12,7 @@
     <link rel="icon" href="import/favicon.png">
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
 </head>
 <body>
     <div data-scroll-container>
@@ -660,42 +661,40 @@
 
     </div>
 
-    <!-- Locomotive Scroll JS -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
-    <script>
-        // Initialisation de Locomotive Scroll
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Initialisation Locomotive Scroll
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        getBoundingClientRect: true
+    });
+
+    // Recalcul des positions après redimensionnement
+    window.addEventListener('resize', () => {
+        scroll.update();
+    });
+
+    // Gestionnaire pour les ancres
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                scroll.scrollTo(targetElement, {
+                    offset: 0,
+                    duration: 800,
+                    easing: [0.25, 0.00, 0.35, 1.00]
+                });
+            }
         });
+    });
 
-        // Gestionnaire d'événements pour les ancres
-        const anchorLinks = document.querySelectorAll('a[href^="#"]'); // Sélectionne toutes les ancres
-
-        anchorLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();  // Empêche le comportement par défaut de l'ancre
-                const targetId = this.getAttribute('href').substring(1); // Récupère l'ID cible sans le "#"
-                const targetElement = document.getElementById(targetId);  // Trouve l'élément cible
-
-                if (targetElement) {
-                    // Utilisation de Locomotive Scroll pour faire défiler jusqu'à l'élément
-                    scroll.scrollTo(targetElement);
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer
+    const sections = document.querySelectorAll('[data-scroll-section]');
     const anchors = document.querySelectorAll('.anchor');
-    const sections = document.querySelectorAll('section');
-
-    const options = {
-        root: null, // viewport entier
-        rootMargin: '0px',
-        threshold: 0.6 // 60% de la section visible
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -704,11 +703,10 @@
                 if (activeAnchor) activeAnchor.classList.add('active');
             }
         });
-    }, options);
+    }, { root: null, threshold: 0.6 });
 
     sections.forEach(section => observer.observe(section));
 });
-
-    </script>
+</script>
 </body>
 </html>
