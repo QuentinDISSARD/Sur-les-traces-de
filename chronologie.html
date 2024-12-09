@@ -663,19 +663,21 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-    // Initialisation Locomotive Scroll
+    // Initialisation de Locomotive Scroll
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        getBoundingClientRect: true
+        getBoundingClientRect: true,
+        log: true // Activez les logs pour déboguer
     });
 
-    // Recalcul des positions après redimensionnement
+    // Recalcule les positions au redimensionnement de la fenêtre
     window.addEventListener('resize', () => {
+        console.log("Fenêtre redimensionnée - mise à jour Locomotive Scroll");
         scroll.update();
     });
 
-    // Gestionnaire pour les ancres
+    // Gestion des ancres
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -683,30 +685,57 @@
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
+                console.log(`Défilement vers : ${targetId}`);
                 scroll.scrollTo(targetElement, {
                     offset: 0,
                     duration: 800,
                     easing: [0.25, 0.00, 0.35, 1.00]
                 });
+            } else {
+                console.error(`Cible introuvable pour l'ID : ${targetId}`);
             }
         });
     });
 
-    // Intersection Observer
+    // Intersection Observer pour les sections
     const sections = document.querySelectorAll('[data-scroll-section]');
     const anchors = document.querySelectorAll('.anchor');
+
+    const observerOptions = {
+        root: null, // Vueport complet
+        threshold: 0.6 // 60% visible
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log(`Section visible : ${entry.target.id}`);
                 anchors.forEach(anchor => anchor.classList.remove('active'));
                 const activeAnchor = document.querySelector(`.anchor[href="#${entry.target.id}"]`);
                 if (activeAnchor) activeAnchor.classList.add('active');
             }
         });
-    }, { root: null, threshold: 0.6 });
+    }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
-});
+
+    // Gestion globale des erreurs
+    window.onerror = function(message, source, lineno, colno, error) {
+        console.error("Erreur détectée :", message, source, lineno, colno, error);
+    };
+
+    // Débogage Locomotive Scroll
+    scroll.on('scroll', (obj) => {
+        console.log('Scroll en cours :', obj.scroll);
+    });
+
+    // Mise à jour après chargement complet
+    setTimeout(() => {
+        console.log("Mise à jour après le chargement complet");
+        scroll.update();
+    }, 500);
+
+    });
 </script>
 </body>
 </html>
