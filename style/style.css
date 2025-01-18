@@ -137,6 +137,10 @@ li.saut{
     height: fit-content;
 }
 
+div.traduction-content p.traduction-arabe{
+    text-align: right !important;
+}
+
 .content-wrapper {
     display: flex;
     align-items: center;
@@ -198,6 +202,11 @@ img.help:hover{
     margin-right: 150px;
     height: auto;
     display: flex;
+}
+
+img.little-arabic{
+    max-width: 40%;
+    margin-left: 60%;
 }
 
 img.small {
@@ -333,6 +342,12 @@ sup {
     vertical-align: super;
     padding-left: 1px;
     font-size: 0.8em;
+}
+
+span.author{
+    width: 100%;
+    float: right;
+    text-align: right;
 }
 
 span.italic{
@@ -806,6 +821,16 @@ img.logo{
         opacity: 1;
         transform: translate(-50%, -50%);
     }
+}
+
+[data-scroll-container] {
+    overflow: hidden;
+    position: relative;
+}
+
+[data-scroll-section] {
+    position: relative;
+    min-height: 100vh; /* Ajustez selon vos besoins */
 }
 
 
